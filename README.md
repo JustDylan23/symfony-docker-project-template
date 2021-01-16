@@ -35,6 +35,8 @@ I highly advice you to run docker on Linux since its really slow on Windows comp
   Allows the user to define routes and other things directly above the controller via annotations instead of in a dedicated yml file
 - [symfony/maker-bundle](https://packagist.org/packages/symfony/maker-bundle) \
   Allows the user to generate code via the command like, for example entities, forms, login pages, etc.
+- [symfony/webpack-encore-bundle](https://packagist.org/packages/symfony/webpack-encore-bundle) \
+  Integrates your Symfony app with Webpack Encore!
 
 All the bundles that make use of the Symfony flex recipe system can be found at https://flex.symfony.com/ 
 you can simply add them by your project by using 
@@ -59,11 +61,23 @@ installing backend dependencies after connecting to the container for the first 
 ```
 $ composer install
 ```
+installing frontend dependencies
+```
+$ yarn
+```
+building frontend dependencies
+```
+$ yarn encore dev
+```
+building frontend dependencies + rebuilding on updates
+```
+$ yarn encore dev-server --hot
+```
 
 modify your DATABASE_URL config in .env 
 
 ### Ready up
-call [localhost](http://localhost/) in your browser
+open [localhost](http://localhost/) in your browser and you should see the default page configured by Symfony. There are some controller functions that you can uncomment in src/Controller/IndexController.php and play around with.
  
 ### Thanks to
 https://github.com/mlocati/docker-php-extension-installer \

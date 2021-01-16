@@ -3,10 +3,9 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
-/*
- * Uncomment these 3 functions and refresh the page to see your first few pages in action
- */
 class IndexController extends AbstractController
 {
 //    #[Route('/', name: 'index')]
