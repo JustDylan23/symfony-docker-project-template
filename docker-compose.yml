@@ -9,6 +9,8 @@ services:
             - MYSQL_DATABASE=MY_DATABASE_NAME # replace with the name of your app for example: web_blog
             - MYSQL_USER=symfony
             - MYSQL_PASSWORD=docker
+        volumes:
+            - ./docker/mysql:/var/lib/mysql
     phpmyadmin:
         image: 'phpmyadmin/phpmyadmin'
         ports:
